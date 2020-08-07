@@ -1,0 +1,13 @@
+C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\bin\Release\netcoreapp2.2\Ginger.PluginPackage.json
+C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\bin\Release\netcoreapp2.2\GingerRubyPluginConsole.deps.json
+C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\bin\Release\netcoreapp2.2\GingerRubyPluginConsole.runtimeconfig.json
+C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\bin\Release\netcoreapp2.2\GingerRubyPluginConsole.runtimeconfig.dev.json
+C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\bin\Release\netcoreapp2.2\GingerRubyPluginConsole.dll
+C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\bin\Release\netcoreapp2.2\GingerRubyPluginConsole.pdb
+C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\obj\Release\netcoreapp2.2\GingerRubyPluginConsole.AssemblyInfoInputs.cache
+C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\obj\Release\netcoreapp2.2\GingerRubyPluginConsole.AssemblyInfo.cs
+C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\obj\Release\netcoreapp2.2\GingerRubyPluginConsole.csproj.CoreCompileInputs.cache
+C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\obj\Release\netcoreapp2.2\GingerRubyPluginConsole.dll
+C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\obj\Release\netcoreapp2.2\GingerRubyPluginConsole.pdb
+C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\obj\Release\netcoreapp2.2\GingerRubyPluginConsole.genruntimeconfig.cache
+C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\obj\Release\netcoreapp2.2\GingerRubyPluginConsole.csprojAssemblyReference.cache
