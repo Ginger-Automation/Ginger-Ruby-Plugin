@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\RubyPluginDev\\Ginger-Ruby-Plugin\\GingerRubyPluginTest\\GingerRubyPluginTest.csproj": {}
+    "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\Ginger-Ruby-Plugin\\GingerRubyPluginTest\\GingerRubyPluginTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\RubyPluginDev\\Ginger-Ruby-Plugin\\GingerRubyPluginConsole\\GingerRubyPluginConsole.csproj": {
+    "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\Ginger-Ruby-Plugin\\GingerRubyPluginConsole\\GingerRubyPluginConsole.csproj": {
       "version": "1.2.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\RubyPluginDev\\Ginger-Ruby-Plugin\\GingerRubyPluginConsole\\GingerRubyPluginConsole.csproj",
+        "projectUniqueName": "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\Ginger-Ruby-Plugin\\GingerRubyPluginConsole\\GingerRubyPluginConsole.csproj",
         "projectName": "GingerRubyPluginConsole",
-        "projectPath": "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\RubyPluginDev\\Ginger-Ruby-Plugin\\GingerRubyPluginConsole\\GingerRubyPluginConsole.csproj",
+        "projectPath": "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\Ginger-Ruby-Plugin\\GingerRubyPluginConsole\\GingerRubyPluginConsole.csproj",
         "packagesPath": "C:\\Users\\arvindgh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\RubyPluginDev\\Ginger-Ruby-Plugin\\GingerRubyPluginConsole\\obj\\",
+        "outputPath": "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\Ginger-Ruby-Plugin\\GingerRubyPluginConsole\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -21,14 +21,14 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp2.2"
+          "netcoreapp2.1"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp2.2": {
+          "netcoreapp2.1": {
             "projectReferences": {}
           }
         },
@@ -39,7 +39,7 @@
         }
       },
       "frameworks": {
-        "netcoreapp2.2": {
+        "netcoreapp2.1": {
           "dependencies": {
             "Ginger.Plugin.Core": {
               "target": "Package",
@@ -48,7 +48,7 @@
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",
-              "version": "[2.2.0, )",
+              "version": "[2.1.0, )",
               "autoReferenced": true
             }
           },
@@ -66,14 +66,14 @@
         }
       }
     },
-    "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\RubyPluginDev\\Ginger-Ruby-Plugin\\GingerRubyPluginTest\\GingerRubyPluginTest.csproj": {
+    "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\Ginger-Ruby-Plugin\\GingerRubyPluginTest\\GingerRubyPluginTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\RubyPluginDev\\Ginger-Ruby-Plugin\\GingerRubyPluginTest\\GingerRubyPluginTest.csproj",
+        "projectUniqueName": "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\Ginger-Ruby-Plugin\\GingerRubyPluginTest\\GingerRubyPluginTest.csproj",
         "projectName": "GingerRubyPluginTest",
-        "projectPath": "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\RubyPluginDev\\Ginger-Ruby-Plugin\\GingerRubyPluginTest\\GingerRubyPluginTest.csproj",
+        "projectPath": "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\Ginger-Ruby-Plugin\\GingerRubyPluginTest\\GingerRubyPluginTest.csproj",
         "packagesPath": "C:\\Users\\arvindgh\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\RubyPluginDev\\Ginger-Ruby-Plugin\\GingerRubyPluginTest\\obj\\",
+        "outputPath": "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\Ginger-Ruby-Plugin\\GingerRubyPluginTest\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -92,8 +92,8 @@
         "frameworks": {
           "netcoreapp2.1": {
             "projectReferences": {
-              "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\RubyPluginDev\\Ginger-Ruby-Plugin\\GingerRubyPluginConsole\\GingerRubyPluginConsole.csproj": {
-                "projectPath": "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\RubyPluginDev\\Ginger-Ruby-Plugin\\GingerRubyPluginConsole\\GingerRubyPluginConsole.csproj"
+              "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\Ginger-Ruby-Plugin\\GingerRubyPluginConsole\\GingerRubyPluginConsole.csproj": {
+                "projectPath": "C:\\Users\\arvindgh\\source\\repos\\Ginger-Automation\\Ginger-Ruby-Plugin\\GingerRubyPluginConsole\\GingerRubyPluginConsole.csproj"
               }
             }
           }

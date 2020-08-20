@@ -9,30 +9,30 @@ namespace GingerRubyPluginTest
     [TestClass]
     public class RubyExecutionTest
     {
-        //[TestMethod]
-        //public void SimpleScriptFileTest()
-        //{
-        //    //Arrange
-        //    RubyScriptExecuterService rubyScriptExecuterService = new RubyScriptExecuterService();
-        //    GingerAction GA = new GingerAction();
+        [TestMethod]
+        public void SimpleScriptFileTest()
+        {
+            //Arrange
+            RubyScriptExecuterService rubyScriptExecuterService = new RubyScriptExecuterService();
+            GingerAction GA = new GingerAction();
 
-        //    List<RubyPrameters> rubyPrameters = new List<RubyPrameters>();
-        //    rubyPrameters.Add(new RubyPrameters() { Param = "Param 1", Value = "10" });
-        //    rubyPrameters.Add(new RubyPrameters() { Param = "Param 2", Value = "20" });
-        //    //Act
-        //    rubyScriptExecuterService.ExecuteRubyScriptFile(GA, @"C:\Work\Scripts\test.rb", "=", rubyPrameters);
+            List<RubyPrameters> rubyPrameters = new List<RubyPrameters>();
+            rubyPrameters.Add(new RubyPrameters() { Param = "Param 1", Value = "10" });
+            rubyPrameters.Add(new RubyPrameters() { Param = "Param 2", Value = "20" });
+            //Act
+            rubyScriptExecuterService.ExecuteRubyScriptFile(GA, @"C:\Work\Scripts\test.rb", "=", rubyPrameters);
 
-        //    //Assert
-        //    string str = string.Empty;
-        //    Assert.AreEqual((GA.Output != null && GA.Output.OutputValues.Count > 0), true, "Execution Output values found validation");
-        //    foreach (IGingerActionOutputValue s in GA.Output.OutputValues)
-        //    {
-        //        str = s.Value.ToString();
-        //    }
-        //    Assert.AreEqual(str.Contains("30"), true);
-        //}
+            //Assert
+            string str = string.Empty;
+            Assert.AreEqual((GA.Output != null && GA.Output.OutputValues.Count > 0), true, "Execution Output values found validation");
+            foreach (IGingerActionOutputValue s in GA.Output.OutputValues)
+            {
+                str = s.Value.ToString();
+            }
+            Assert.AreEqual(str.Contains("30"), true);
+        }
 
-       
+
         [TestMethod]
         public void SimpleScriptContentTest()
         {

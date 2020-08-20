@@ -17,7 +17,7 @@ namespace GingerRubyPluginConsole
                 }
                 else
                 {
-                    gingerNodeStarter.StartNode("Ruby Script Execution Service", new RubyScriptExecuterService(), "192.168.17.209", 15051);                    
+                    gingerNodeStarter.StartNode("Ruby Script Execution Service", new RubyScriptExecuterService());                    
                 }
                 gingerNodeStarter.Listen();
             }

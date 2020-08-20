@@ -4,7 +4,6 @@ C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPl
 C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\bin\Debug\netcoreapp2.2\GingerRubyPluginConsole.runtimeconfig.dev.json
 C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\bin\Debug\netcoreapp2.2\GingerRubyPluginConsole.dll
 C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\bin\Debug\netcoreapp2.2\GingerRubyPluginConsole.pdb
-C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\obj\Debug\netcoreapp2.2\GingerRubyPluginConsole.csprojAssemblyReference.cache
 C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\obj\Debug\netcoreapp2.2\GingerRubyPluginConsole.AssemblyInfoInputs.cache
 C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\obj\Debug\netcoreapp2.2\GingerRubyPluginConsole.AssemblyInfo.cs
 C:\Users\arvindgh\source\repos\Ginger-Automation\Ginger-Ruby-Plugin\GingerRubyPluginConsole\obj\Debug\netcoreapp2.2\GingerRubyPluginConsole.csproj.CoreCompileInputs.cache

@@ -86,29 +86,6 @@ namespace GingerRubyPluginConsole
             }
         }
 
-        public static bool OutputParamExist(GingerAction GA, string paramName, string paramValue = null)
-        {
-            IGingerActionOutputValue val = null;
-            if (paramValue == null)
-            {
-                val = GA.Output.OutputValues.Where(x => x.Param == paramName).FirstOrDefault();
-            }
-            else
-            {
-                val = GA.Output.OutputValues.Where(x => x.Param == paramName && x.Value.ToString() == paramValue).FirstOrDefault();
-            }
-
-            if (val == null)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
-        }
-
-
         private CommandElements PrepareCommand()
         {
             string Arguments = string.Empty;
@@ -146,12 +123,12 @@ namespace GingerRubyPluginConsole
 
         static protected void AddCommandOutput(string output)
         {
-            mCommandOutputBuffer += output + "\n";
+            mCommandOutputBuffer += output + System.Environment.NewLine;
             Console.WriteLine(output);
         }
         static protected void AddCommandOutputError(string error)
         {
-            mCommandOutputErrorBuffer += error + "\n";
+            mCommandOutputErrorBuffer += error + System.Environment.NewLine;
             Console.WriteLine(error);
         }
         protected void Process_Exited(object sender, EventArgs e)
@@ -194,11 +171,6 @@ namespace GingerRubyPluginConsole
                             value = dataRow.Substring(param.Length + 1);
                             GingerAction.AddOutput(param, value, "Console Output");
                         }
-                        else 
-                        {
-                            GingerAction.AddOutput("?????", dataRow, "Console Output");
-                        }
-                        //TODO: Add the result to Action output values
                     }
                 }
             }
@@ -213,66 +185,42 @@ namespace GingerRubyPluginConsole
             try
             {
                 CommandElements commandVals = (CommandElements)commandVal;
-                Task.Run(() =>
+                Process process = new Process();
+                if (commandVals.WorkingFolder != null)
                 {
-                    Process process = new Process();
-                    if (commandVals.WorkingFolder != null)
-                    {
-                        process.StartInfo.WorkingDirectory = commandVals.WorkingFolder;
-                    }
+                    process.StartInfo.WorkingDirectory = commandVals.WorkingFolder;
+                }
 
-                    process.StartInfo.FileName = commandVals.ExecuterFilePath;
-                    process.StartInfo.Arguments = commandVals.Arguments;
+                process.StartInfo.FileName = commandVals.ExecuterFilePath;
+                process.StartInfo.Arguments = commandVals.Arguments;
 
-                    //process.StartInfo.CreateNoWindow = false;
-                    process.StartInfo.UseShellExecute = false;
-                    process.StartInfo.RedirectStandardOutput = true;
-                    process.StartInfo.RedirectStandardError = true;
-                    mCommandOutputBuffer = string.Empty;
-                    mCommandOutputErrorBuffer = string.Empty;
-                    process.OutputDataReceived += (proc, outLine) => { AddCommandOutput(outLine.Data); };
-                    process.ErrorDataReceived += (proc, outLine) => { AddCommandOutputError(outLine.Data); };
-                    process.Exited += Process_Exited;
-                    Console.Write("--Staring process");
-                    process.Start();
-                    Console.WriteLine(process.Id);
-                    //Stopwatch stopwatch = Stopwatch.StartNew();
-                    process.BeginOutputReadLine();
+                process.StartInfo.CreateNoWindow = true;
+                process.StartInfo.UseShellExecute = false;
+                process.StartInfo.RedirectStandardOutput = true;
+                process.StartInfo.RedirectStandardInput = true;
+                process.StartInfo.RedirectStandardError = true;
+                mCommandOutputBuffer = string.Empty;
+                mCommandOutputErrorBuffer = string.Empty;
+                process.OutputDataReceived += (proc, outLine) => { AddCommandOutput(outLine.Data); };
+                process.ErrorDataReceived += (proc, outLine) => { AddCommandOutputError(outLine.Data); };
+                process.Exited += Process_Exited;
+                Console.WriteLine("--Staring process");
+                process.Start();
+                Stopwatch stopwatch = Stopwatch.StartNew();
+                process.BeginOutputReadLine();
 
-                    process.BeginErrorReadLine();
+                process.BeginErrorReadLine();
 
-                    int maxWaitingTime = 1000 * 60 * 60;//TODO: User defined
-                    process.PriorityBoostEnabled = true;
+                int maxWaitingTime = 1000 * 60 * 60;//1 hour
 
-                    process.WaitForExit();
-                    Console.Write("--Process done");
-                    //stopwatch.Stop();
+                process.WaitForExit(maxWaitingTime);
+                Console.WriteLine("--Process done");
+                stopwatch.Stop();
 
-                    //if (stopwatch.ElapsedMilliseconds >= maxWaitingTime)
-                    //{
-                    //    GingerAction.AddError("Command processing timeout has reached!");
-                    //}
-                }).Wait();
-
-                //CommandElements commandVals = (CommandElements)commandVal;
-
-                //using (Process compiler = new Process())
-                //{
-                //    //compiler.StartInfo.FileName = @"C:\Groovy\Groovy-2.5.5\bin\groovy.bat";
-                //    //compiler.StartInfo.Arguments = "\"C:\\Work\\Scripts\\BasicScript.groovy\" 10 20 30";
-                //    compiler.StartInfo.FileName = @"C:\Ruby27\bin\ruby.exe";
-                //    compiler.StartInfo.Arguments = "\"C:\\Work\\Scripts\\test.rb\" 10 22";
-                //    compiler.StartInfo.WorkingDirectory = "C:\\Work\\Scripts\\";
-                //    compiler.StartInfo.UseShellExecute = false;
-                //    compiler.StartInfo.RedirectStandardOutput = true;
-                //    //compiler.StartInfo.RedirectStandardError = true;
-                //    compiler.StartInfo.CreateNoWindow = true;
-
-                //    compiler.Start();
-                //    string output = compiler.StandardOutput.ReadToEnd();
-                //    AddCommandOutput(output);
-                //    //compiler.WaitForExit();
-                //}
+                if (stopwatch.ElapsedMilliseconds >= maxWaitingTime)
+                {
+                    GingerAction.AddError("Command processing timeout has reached!");
+                }
             }
             catch (Exception ex)
             {
@@ -286,14 +234,5 @@ namespace GingerRubyPluginConsole
             
         }
         
-        private void Process_ErrorDataReceivedAsync(object sender, DataReceivedEventArgs e)
-        {
-            mOutputs += e.Data + System.Environment.NewLine;
-        }
-
-        private void Process_OutputDataReceivedAsync(object sender, DataReceivedEventArgs e)
-        {
-            mOutputs += e.Data + System.Environment.NewLine;
-        }
     }
 }
