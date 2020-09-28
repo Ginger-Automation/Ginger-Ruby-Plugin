@@ -1,0 +1,26 @@
+# Ruby Linux pipeline
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+
+
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'restore'
+    feedsToUse: 'select'
+  displayName: 'Restore Packages'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+  displayName: 'Build Project'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+  displayName: 'Run Unit Tests'
