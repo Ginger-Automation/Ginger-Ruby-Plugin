@@ -3,6 +3,7 @@ using GingerRubyPluginConsole;
 using Amdocs.Ginger.Plugin.Core;
 using System.Threading;
 using System.Collections.Generic;
+using GingerTestHelper;
 
 namespace GingerRubyPluginTest
 {
@@ -20,7 +21,8 @@ namespace GingerRubyPluginTest
             rubyPrameters.Add(new RubyPrameters() { Param = "Param 1", Value = "10" });
             rubyPrameters.Add(new RubyPrameters() { Param = "Param 2", Value = "20" });
             //Act
-            rubyScriptExecuterService.ExecuteRubyScriptFile(GA, @"C:\Work\Scripts\test.rb", "=", rubyPrameters);
+
+            rubyScriptExecuterService.ExecuteRubyScriptFile(GA, TestResources.GetTestResourcesFile("test.rb"), "=", rubyPrameters);
 
             //Assert
             string str = string.Empty;
@@ -68,7 +70,7 @@ namespace GingerRubyPluginTest
             rubyPrameters.Add(new RubyPrameters() { Param = "Param 1", Value = "10" });
             rubyPrameters.Add(new RubyPrameters() { Param = "Param 2", Value = "20" });
             //Act
-            rubyScriptExecuterService.ExecuteRubyScriptFile(GA, @"/home/ginger/ginger_tests/Ruby_Plugin_Test/test.rb", "=", rubyPrameters);
+            rubyScriptExecuterService.ExecuteRubyScriptFile(GA, TestResources.GetTestResourcesFile("test.rb"), "=", rubyPrameters);
 
             //Assert
             string str = string.Empty;
