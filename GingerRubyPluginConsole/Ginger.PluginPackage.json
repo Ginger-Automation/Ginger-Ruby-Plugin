@@ -1,6 +1,6 @@
 {
   "Id": "Ruby",
-  "Version": "1.0.0",
+  "Version": "2.0.0",
   "ProjectUrl": "https://github.com/Ginger-Automation/Ginger-Ruby-Plugin",
   "Description": "Allow execution of Ruby scripts",
   "Summary": "Ruby Integration For Ginger",
