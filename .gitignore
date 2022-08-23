@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/GingerRubyPluginTest/obj/Release/netcoreapp2.1/GingerRubyPluginTest.csproj.AssemblyReference.cache
+/GingerRubyPluginTest/obj/Release/netcoreapp2.1/GingerRubyPluginTest.GeneratedMSBuildEditorConfig.editorconfig
+/GingerRubyPluginConsole/obj/Release/netcoreapp2.1/GingerRubyPluginConsole.csproj.AssemblyReference.cache
+/GingerRubyPluginConsole/obj/Release/netcoreapp2.1/GingerRubyPluginConsole.GeneratedMSBuildEditorConfig.editorconfig
+/GingerRubyPluginConsole/obj/Release/net6.0
+/GingerRubyPluginTest/obj/Release/net6.0
